@@ -89,7 +89,7 @@ const Transaction = {
     }
 }
 
-/** Manipulação da DOM */
+// Manipulação da DOM 
 const Handle = {
 
     transactionsContainer: document.querySelector('#data-table tbody'),
@@ -138,6 +138,7 @@ const Handle = {
     }
 }
 
+// Tratando dados
 const Utils = {
 
     // Tratando valor de Amount
@@ -209,10 +210,6 @@ const Form = {
         }
     },
 
-    saveTransaction(transaction) {
-        Transaction.add(transaction)
-    },
-
     // Limpando os campos
     clearFields() {
         Form.description.value = ''
@@ -238,19 +235,15 @@ const Form = {
             // fechar modal
             Modal.close()
 
-            // salvar
-            // Form.saveTransaction(transaction)
-
-
         } catch (error) {
             alert(error.message)
         }
     }
 }
 
-const App = { 
+const App = {
     init() {
-        
+
         // adicionando dado tratado na DOM
         Transaction.all.forEach(Handle.addTransaction)
 
@@ -268,5 +261,3 @@ const App = {
 }
 
 App.init()
-
-Transaction.remove()
