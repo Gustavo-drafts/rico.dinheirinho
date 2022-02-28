@@ -89,10 +89,6 @@ const Transaction = {
     }
 }
 
-/**
- * Eu preciso pegar as minhas transações do meu objeto aqui no JS e colocar no HTML
- */
-
 /** Manipulação da DOM */
 const Handle = {
 
@@ -146,9 +142,9 @@ const Utils = {
 
     // Tratando valor de Amount
     formatAmount(value) {
-        value = Number(value) * 100
+        value = value * 100
 
-        return value
+        return Math.round(value)
     },
 
     // Tratando valor de Date
