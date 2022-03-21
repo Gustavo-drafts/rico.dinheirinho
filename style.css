@@ -120,9 +120,9 @@ header {
   text-align: center;
 }
 
-#logo {
-  color: #ffffff;
-  font-weight: 100;
+h1 {
+  color: #FFF;
+  font-weight: 400;
 }
 
 /*  Balance =========================== */
